@@ -2,7 +2,7 @@
 
 The `BentRectangle` component is a customizable React component that renders a rectangle with bent edges. It supports various configurations for corner radii, edge bending, and styling, making it highly versatile for creating unique UI elements.
 
-![Bent Div](image-1.png)
+![Bent Div](images/image-1.png)
 
 ## Installation
 
@@ -89,10 +89,10 @@ export default App;
 Below are some example images showcasing the `BentRectangle` component you can use for:
 
 1. **Inward Bending**:
-   ![Inward Bending Example](image.png)
+   ![Inward Bending Example](images/image.png)
 
 2. **Outward Bending**:
-   ![Outward Bending Example](image-3.png)
+   ![Outward Bending Example](images/image-3.png)
 
 ## Notes
 
