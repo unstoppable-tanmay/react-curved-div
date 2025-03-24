@@ -2,7 +2,7 @@
 
 The `BentRectangle` component is a customizable React component that renders a rectangle with bent edges. It supports various configurations for corner radii, edge bending, and styling, making it highly versatile for creating unique UI elements.
 
-![Bent Div](images/image-1.png)
+![Bent Div](https://github.com/unstoppable-tanmay/react-curved-div/blob/main/images/image-1.png?raw=true)
 
 ## Installation
 
@@ -11,6 +11,8 @@ To install the package, use npm or yarn:
 ```bash
 npm install react-curved-div
 ```
+
+> # Checkout Some Examples Live On [Website](https://react-curved-div-site.vercel.app/).
 
 ## Usage
 
@@ -89,10 +91,10 @@ export default App;
 Below are some example images showcasing the `BentRectangle` component you can use for:
 
 1. **Inward Bending**:
-   ![Inward Bending Example](images/image.png)
+   ![Inward Bending Example](https://github.com/unstoppable-tanmay/react-curved-div/blob/main/images/image.png?raw=true)
 
 2. **Outward Bending**:
-   ![Outward Bending Example](images/image-3.png)
+   ![Outward Bending Example](https://github.com/unstoppable-tanmay/react-curved-div/blob/main/images/image-3.png?raw=true)
 
 ## Notes
 
