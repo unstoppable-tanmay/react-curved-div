@@ -22,7 +22,7 @@
     "react-curved-div"
   ],
   "author": "Tanmay",
-  "license": "ISC",
+  "license": "MIT",
   "dependencies": {},
   "devDependencies": {
     "react": "^19.0.0",
