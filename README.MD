@@ -92,10 +92,7 @@ Below are some example images showcasing the `BentRectangle` component you can u
    ![Inward Bending Example](image.png)
 
 2. **Outward Bending**:
-   ![Outward Bending Example](path/to/outward-bending-example.png)
-
-3. **Custom Corner Radii**:
-   ![Custom Corner Radii Example](path/to/custom-corner-radii-example.png)
+   ![Outward Bending Example](image-3.png)
 
 ## Notes
 
