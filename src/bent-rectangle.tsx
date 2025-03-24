@@ -1,49 +1,112 @@
 import React, { useId, useRef, useEffect, useState } from "react";
 
+/**
+ * Props for the BentRectangle component.
+ */
 export interface ShapeProps {
+  /**
+   * Radius for the top-left corner of the shape (in pixels).
+   */
   topLeftCornerRadius?: number;
+
+  /**
+   * Radius for the top-right corner of the shape (in pixels).
+   */
   topRightCornerRadius?: number;
+
+  /**
+   * Radius for the bottom-left corner of the shape (in pixels).
+   */
   bottomLeftCornerRadius?: number;
+
+  /**
+   * Radius for the bottom-right corner of the shape (in pixels).
+   */
   bottomRightCornerRadius?: number;
 
-  // Bend values as percentages of width/height
+  /**
+   * Percentage of the width to bend the top edge of the shape.
+   * Values should be between 0 and 100.
+   */
   topBendPercent?: number;
+
+  /**
+   * Percentage of the width to bend the bottom edge of the shape.
+   * Values should be between 0 and 100.
+   */
   bottomBendPercent?: number;
+
+  /**
+   * Percentage of the height to bend the left edge of the shape.
+   * Values should be between 0 and 100.
+   */
   leftBendPercent?: number;
+
+  /**
+   * Percentage of the height to bend the right edge of the shape.
+   * Values should be between 0 and 100.
+   */
   rightBendPercent?: number;
 
+  /**
+   * React children to be rendered inside the shape.
+   */
   children?: React.ReactNode;
 
+  /**
+   * Additional class name(s) to apply to the shape container.
+   */
   className?: string;
+
+  /**
+   * Inline styles to apply to the shape container.
+   * Excludes properties related to positioning and layout.
+   */
   style?: Omit<
     React.CSSProperties,
     "position" | "display" | "alignItems" | "justifyContent"
   >;
 
+  /**
+   * Direction of the bend for the edges of the shape.
+   * Can be either "inward" or "outward".
+   */
   bendDirection?: "inward" | "outward";
 
+  /**
+   * Additional class name(s) to apply to the content inside the shape.
+   */
   contentClassName?: string;
+
+  /**
+   * Inline styles to apply to the content inside the shape.
+   * Excludes properties related to masking, positioning, and overflow.
+   */
   contentStyle?: Omit<
     React.CSSProperties,
     "mask" | "WebkitMask" | "position" | "width" | "height" | "overflowY"
   >;
 
-  // Whether to take full width of parent
+  /**
+   * Whether the shape should take the full width of its parent container.
+   */
   isFullWidthOfParent?: boolean;
 
-  // Whether to take full height of parent
+  /**
+   * Whether the shape should take the full height of its parent container.
+   */
   isFullHeightOfParent?: boolean;
 }
 
 export const BentRectangle: React.FC<ShapeProps> = ({
-  topLeftCornerRadius = 20,
-  topRightCornerRadius = 20,
-  bottomLeftCornerRadius = 20,
-  bottomRightCornerRadius = 20,
-  topBendPercent = 5,
-  bottomBendPercent = 5,
-  leftBendPercent = 5,
-  rightBendPercent = 5,
+  topLeftCornerRadius = 0,
+  topRightCornerRadius = 0,
+  bottomLeftCornerRadius = 0,
+  bottomRightCornerRadius = 0,
+  topBendPercent = 0,
+  bottomBendPercent = 0,
+  leftBendPercent = 0,
+  rightBendPercent = 0,
   children,
   className = "",
   style = {},
@@ -192,7 +255,7 @@ export const BentRectangle: React.FC<ShapeProps> = ({
   return (
     <div
       ref={containerRef}
-      className={`bent-div-container${className}`}
+      className={`bent-div-container ${className}`}
       style={{ ...containerStyle, ...style }}
     >
       {/* SVG that defines the path and mask */}
@@ -210,7 +273,7 @@ export const BentRectangle: React.FC<ShapeProps> = ({
 
       {/* The actual container with masking applied */}
       <div
-        className={`${contentClassName}`}
+        className={`bent-div-content ${contentClassName}`}
         style={{
           mask: `url(#bentMask-${id})`,
           WebkitMask: `url(#bentMask-${id})`,
