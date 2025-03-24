@@ -1,0 +1,33 @@
+{
+  "name": "react-curved-div",
+  "version": "0.0.1",
+  "description": "A simple react component to create a curved div",
+  "main": "dist/index.js",
+  "files": [
+    "dist"
+  ],
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
+    }
+  },
+  "scripts": {
+    "prebuild": "if exist dist rd /s /q dist",
+    "build": "tsc",
+    "preversion": "npm run build",
+    "version": "npm publish"
+  },
+  "keywords": [
+    "react-curved-div"
+  ],
+  "author": "Tanmay",
+  "license": "ISC",
+  "dependencies": {},
+  "devDependencies": {
+    "react": "^19.0.0",
+    "@types/react": "^19",
+    "typescript": "^5"
+  },
+  "peerDependencies": {}
+}
